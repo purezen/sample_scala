@@ -3,7 +3,7 @@ language: scala
 scala:
     - 2.11.0
 
-shippable_retry 'if [ $i -eq 3 ]; then echo "done"; else foobar$i; fi'
+shippable_retry: 'if [ $i -eq 3 ]; then echo "done"; else foobar$i; fi'
 
 script:
   - export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:PermSize=256M -XX:MaxPermSize=512M"
